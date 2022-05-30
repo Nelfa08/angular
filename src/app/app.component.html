@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Poly Swan Tech</h2>
+  <form>
+    <div class="form">
+      <hello *ngFor="let boucle of myTab" nom="{{ boucle.monNom }}" prenom="{{ boucle.monPrenom }}"></hello>
+    </div>
+    <div class="btn">
+      <button type="button" (click)="onClickNom()">Afficher les noms</button>
+      <button type="button" (click)="onClickPrenom()">Afficher les prénoms</button>
+    </div>
+  </form>
+  <div class="index-contain">
+    <div class="index">
+      <h4>Index: </h4>
+      <input type="number" placeholder="1" [(ngModel)]="index">
+    </div>
+    <div id="resultat"></div>
+    <button class="searchIndex" type="button" (click)="onSearchIndex()">Rechercher l'index</button>
+  </div>
+</div>
